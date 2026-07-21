@@ -72,6 +72,15 @@ style: |
     right: 60px;
     width: 420px;
   }
+  header {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 0.8em;
+    color: #6B6459;
+    letter-spacing: 0.06em;
+  }
+  section.lead header {
+    display: none;
+  }
 ---
 
 <!-- _class: lead -->
@@ -102,6 +111,7 @@ July 22, 2026
 ---
 
 <!-- _class: lead -->
+<!-- header: '1. Introduction' -->
 
 # 1. Introduction
 
@@ -140,6 +150,7 @@ that's exactly the paradigm we're about to contrast with the agentic one.
 ---
 
 <!-- _class: lead -->
+<!-- header: "2. The agent's workspace" -->
 
 # 2. The agent's workspace
 
@@ -184,6 +195,7 @@ that's exactly the paradigm we're about to contrast with the agentic one.
 ---
 
 <!-- _class: lead -->
+<!-- header: '3. Getting started with Claude Code' -->
 
 # 3. Getting started with Claude Code
 
@@ -230,6 +242,7 @@ remember that API billing is per token consumed, not per seat/user.
 ---
 
 <!-- _class: lead -->
+<!-- header: '4. Live demo' -->
 
 # 4. Live demo
 
@@ -262,6 +275,7 @@ work without interrupting; narrate out loud what it's doing.
 ---
 
 <!-- _class: lead -->
+<!-- header: '5. Why context matters' -->
 
 # 5. Why context matters
 
@@ -293,6 +307,7 @@ work without interrupting; narrate out loud what it's doing.
 ---
 
 <!-- _class: lead -->
+<!-- header: '6. Skills' -->
 
 # 6. Skills
 
@@ -315,6 +330,7 @@ work without interrupting; narrate out loud what it's doing.
 ---
 
 <!-- _class: lead -->
+<!-- header: '7. Under the hood' -->
 
 # 7. Under the hood
 
@@ -352,6 +368,7 @@ AI-generated analysis result or bibliographic citation without checking it.
 ---
 
 <!-- _class: lead -->
+<!-- header: '8. How to navigate the hype' -->
 
 # 8. How to navigate the hype
 
