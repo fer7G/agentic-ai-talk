@@ -250,7 +250,7 @@ own in the terminal.
   - `cd folder` → move into "folder"
 - The agent "types" these commands for you
 
-- **Not programming, just running lab protocols:** Think of the terminal as standardizing a recipe. The agent simply runs the steps for you to avoid endless repetitive clicking.	
+- **Not programming, just running lab protocols:** Think of the terminal as standardizing a recipe. The agent simply runs the steps for you to avoid endless repetitive clicking.
 
 ---
 
@@ -493,20 +493,17 @@ AI-generated analysis result or bibliographic citation without checking it.
 - This talk's companion document: `companion-doc.md`
 - The specification used in the demo: `demo/spec-demo.md`
 
+---
 
+## Who to follow (great tech creators in Spanish)
+
+- **midudev** — web & coding best practices
+- **BettaTech** — software engineering & tech concepts
+- **La Inteligencia Artificial** — AI updates & model overviews
 
 ---
 
-## Who to follow
-
-
-- **Who to follow (great tech creators in Spanish):**
-  - **midudev** (web & coding best practices)
-  - **BettaTech** (software engineering & tech concepts)
-  - **La Inteligencia Artificial** (AI updates & model overviews)
-
 <!-- _class: lead -->
-
 <!-- header: 'Discussion' -->
 
 # Open discussion & lab pro-tips
