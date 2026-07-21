@@ -243,6 +243,7 @@ own in the terminal.
 - A command-line interface (CLI) for working with Claude in an agentic way
 - Runs in your terminal, inside your project folder
 - Sees your files, can edit them, run commands, install dependencies...
+- Can run autonomous tasks in the **background** (e.g., executing a long analysis or refactoring a script while you focus on something else)
 
 ---
 
@@ -443,6 +444,8 @@ AI-generated analysis result or bibliographic citation without checking it.
 - Test with your own data and real tasks before believing a headline
 - The useful question isn't "is this the newest thing?" but "does this save me time today, on my problem?"
 
+- **Which model to choose?** For agentic coding and bioinformatics scripts, our default recommendation (what Fer uses) is **Claude Sonnet** — the best balance of speed, reasoning, and cost.
+
 ---
 
 ## Resources to keep learning
@@ -452,7 +455,17 @@ AI-generated analysis result or bibliographic citation without checking it.
 - This talk's companion document: `companion-doc.md`
 - The specification used in the demo: `demo/spec-demo.md`
 
+
+
 ---
+
+## Who to follow
+
+
+- **Who to follow (great tech creators in Spanish):**
+  - **midudev** (web & coding best practices)
+  - **BettaTech** (software engineering & tech concepts)
+  - **La Inteligencia Artificial** (AI updates & model overviews)
 
 <!-- _class: lead -->
 
