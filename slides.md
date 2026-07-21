@@ -68,9 +68,9 @@ style: |
   }
   img.title-logo {
     position: absolute;
-    bottom: 60px;
-    right: 60px;
-    width: 420px;
+    bottom: 40px;
+    left: 73px;
+    width: 400px;
   }
   header {
     font-family: "Playfair Display", Georgia, serif;
@@ -86,9 +86,11 @@ style: |
 <!-- _class: lead -->
 <!-- _paginate: false -->
 
-# Agentic AI and *Vibe Coding*
+![bg right:38%](assets/cover-image.jpeg)
 
-## How to make the most of the new wave of AI (without getting lost in the hype)
+# Getting Started with Agentic AI
+
+## A practical introduction to navigate the new wave of AI
 
 Fernando Guirao, Uciel Chorostecki, Nicolás Aira
 July 22, 2026
@@ -111,7 +113,7 @@ July 22, 2026
 ---
 
 <!-- _class: lead -->
-<!-- header: '1. Introduction' -->
+<!-- header: 'Introduction' -->
 
 # 1. Introduction
 
@@ -150,7 +152,7 @@ that's exactly the paradigm we're about to contrast with the agentic one.
 ---
 
 <!-- _class: lead -->
-<!-- header: "2. The agent's workspace" -->
+<!-- header: "The agent's workspace" -->
 
 # 2. The agent's workspace
 
@@ -195,7 +197,7 @@ that's exactly the paradigm we're about to contrast with the agentic one.
 ---
 
 <!-- _class: lead -->
-<!-- header: '3. Getting started with Claude Code' -->
+<!-- header: 'Getting started with Claude Code' -->
 
 # 3. Getting started with Claude Code
 
@@ -242,7 +244,7 @@ remember that API billing is per token consumed, not per seat/user.
 ---
 
 <!-- _class: lead -->
-<!-- header: '4. Live demo' -->
+<!-- header: 'Live demo' -->
 
 # 4. Live demo
 
@@ -275,7 +277,7 @@ work without interrupting; narrate out loud what it's doing.
 ---
 
 <!-- _class: lead -->
-<!-- header: '5. Why context matters' -->
+<!-- header: 'Why context matters' -->
 
 # 5. Why context matters
 
@@ -307,7 +309,7 @@ work without interrupting; narrate out loud what it's doing.
 ---
 
 <!-- _class: lead -->
-<!-- header: '6. Skills' -->
+<!-- header: 'Skills' -->
 
 # 6. Skills
 
@@ -330,7 +332,7 @@ work without interrupting; narrate out loud what it's doing.
 ---
 
 <!-- _class: lead -->
-<!-- header: '7. Under the hood' -->
+<!-- header: 'Under the hood' -->
 
 # 7. Under the hood
 
@@ -368,7 +370,7 @@ AI-generated analysis result or bibliographic citation without checking it.
 ---
 
 <!-- _class: lead -->
-<!-- header: '8. How to navigate the hype' -->
+<!-- header: 'How to navigate the hype' -->
 
 # 8. How to navigate the hype
 

@@ -1,4 +1,4 @@
-# Agentic AI and Vibe Coding
+# Getting Started with Agentic AI
 
 **Talk companion document**
 Fernando Guirao, Uciel Chorostecki, Nicolás Aira — Computational RNA Biology Group, Biomedical Sciences (UIC)

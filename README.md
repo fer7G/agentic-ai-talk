@@ -1,9 +1,9 @@
-# Agentic AI and Vibe Coding — talk material
+# Getting Started with Agentic AI — talk material
 
-Material for the seminar on agentic AI / vibe coding at the Biomedical Sciences
-department (UIC), July 22, 2026. The talk itself is in English (this README and
-our working conversation are in Spanish, but everything the audience sees is
-in English).
+Material for the seminar on agentic AI (a.k.a. vibe coding) at the Biomedical
+Sciences department (UIC), July 22, 2026. The talk itself is in English (this
+README and our working conversation are in Spanish, but everything the
+audience sees is in English).
 
 ## Contents
 
