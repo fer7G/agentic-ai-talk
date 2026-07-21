@@ -91,6 +91,10 @@ style: |
     width: 480px;
     border-radius: 12px;
   }
+  img.fig-right.fig-small {
+    width: 200px;
+    right: 150px;
+  }
   section.has-os-logos {
     padding-right: 420px;
   }
@@ -276,12 +280,16 @@ own in the terminal.
 
 ---
 
+<!-- _class: has-fig-right -->
+
 ## What is Claude Code?
 
 - A command-line interface (CLI) for working with Claude in an agentic way
 - Runs in your terminal, inside your project folder
 - Sees your files, can edit them, run commands, install dependencies...
 - Can run autonomous tasks in the **background** (e.g., executing a long analysis or refactoring a script while you focus on something else)
+
+<img src="assets/claudecode.png" alt="Claude Code mascot" class="fig-right fig-small" />
 
 ---
 
