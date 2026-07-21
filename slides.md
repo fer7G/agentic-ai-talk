@@ -66,26 +66,25 @@ style: |
   section::after {
     color: #9A9382;
   }
+  img.title-logo {
+    position: absolute;
+    bottom: 60px;
+    right: 60px;
+    width: 420px;
+  }
 ---
 
 <!-- _class: lead -->
+<!-- _paginate: false -->
 
 # Agentic AI and *Vibe Coding*
 
 ## How to make the most of the new wave of AI (without getting lost in the hype)
 
-Fernando Guirao
-Computational RNA Biology Group — Biomedical Sciences, UIC
+Fernando Guirao, Uciel Chorostecki, Nicolás Aira
 July 22, 2026
 
----
-
-## About me
-
-- Recent graduate in Computer Science Engineering — FIB, UPC
-- Did my thesis (TFG) at the **Computational RNA Biology Group** (UIC)
-- Used agentic AI heavily throughout the thesis to write code
-- This talk is what I wish someone had told me when I started
+<img src="assets/uic-group-logo.png" alt="Computational RNA Biology Group — UIC" class="title-logo" />
 
 ---
 
@@ -382,5 +381,6 @@ AI-generated analysis result or bibliographic citation without checking it.
 
 ## Questions
 
-Fernando Guirao
-fernando.guirao@estudiantat.upc.edu
+Fernando Guirao — fernando.guirao@estudiantat.upc.edu
+Uciel Chorostecki — upchorostecki@uic.es
+Nicolás Aira — naira@uic.es

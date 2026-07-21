@@ -1,7 +1,7 @@
 # Agentic AI and Vibe Coding
 
 **Talk companion document**
-Fernando Guirao — Computational RNA Biology Group, Biomedical Sciences (UIC)
+Fernando Guirao, Uciel Chorostecki, Nicolás Aira — Computational RNA Biology Group, Biomedical Sciences (UIC)
 July 22, 2026
 
 This document accompanies the slides (`slides.md`) and expands on each section in
