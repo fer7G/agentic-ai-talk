@@ -80,6 +80,7 @@ style: |
   section.lead header {
     display: none;
   }
+  @import url('assets/timeline.css');
 ---
 
 <!-- _class: lead -->
@@ -118,27 +119,60 @@ July 22, 2026
 
 ---
 
-## From ChatGPT to the agent
+## The road to agentic coding
 
-- **Late 2022**: the ChatGPT boom
-- The "chat" paradigm: question → answer
-- The human copies, pastes, and executes every step by hand
-- The AI only "talks"; it doesn't act on its own
+<div class="timeline">
+  <div class="tl-line"></div>
+  <div class="tl-event tl-pos-chatgpt">
+    <div class="tl-dot"></div>
+    <div class="tl-content tl-above">
+      <div class="tl-label">
+        <span class="tl-name">ChatGPT</span>
+        <span class="tl-sub">chat goes mainstream</span>
+      </div>
+      <div class="tl-date">Nov 2022</div>
+    </div>
+  </div>
+  <div class="tl-event tl-pos-cursor">
+    <div class="tl-dot"></div>
+    <div class="tl-content tl-below">
+      <div class="tl-date">Mar 2023</div>
+      <div class="tl-label">
+        <span class="tl-name">Cursor</span>
+        <span class="tl-sub">agent inside the IDE</span>
+      </div>
+    </div>
+  </div>
+  <div class="tl-event tl-pos-claudecode">
+    <div class="tl-dot"></div>
+    <div class="tl-content tl-above">
+      <div class="tl-label">
+        <span class="tl-name">Claude Code</span>
+        <span class="tl-sub">agent goes standalone</span>
+      </div>
+      <div class="tl-date">May 2025</div>
+    </div>
+  </div>
+  <div class="tl-event tl-today tl-pos-today">
+    <div class="tl-dot"></div>
+    <div class="tl-content tl-below">
+      <div class="tl-date">Jul 2026</div>
+      <div class="tl-label">
+        <span class="tl-name">Today</span>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!--
 Speaker note: good moment to ask the room who has used ChatGPT by
 copy-pasting code or text by hand. Almost everyone will raise a hand:
-that's exactly the paradigm we're about to contrast with the agentic one.
+that's exactly the paradigm this timeline moves away from. Cursor and
+Claude Code both let the model act (read/write files, run commands,
+observe results, self-correct) instead of just talking — the difference
+between them is whether that agent lives inside an IDE or stands on its
+own in the terminal.
 -->
-
----
-
-## The new paradigm: agentic AI
-
-- The LLM is no longer just a "text oracle"
-- It can **use tools**: read/write files, run commands, browse the web, call APIs...
-- It plans, executes, observes the result, and corrects itself — autonomously
-- This is now the dominant paradigm in production environments (not just software)
 
 ---
 

@@ -1,0 +1,76 @@
+/* Styles for the "road to agentic coding" timeline (slides.md, section 1) */
+
+.timeline {
+  position: relative;
+  height: 240px;
+  margin-top: 2.5em;
+}
+.tl-line {
+  position: absolute;
+  top: 50%;
+  left: 8%;
+  right: 8%;
+  height: 3px;
+  background: #C05C3B;
+  transform: translateY(-50%);
+}
+.tl-event {
+  position: absolute;
+  top: 50%;
+}
+.tl-pos-chatgpt { left: 10%; }
+.tl-pos-cursor { left: 30%; }
+.tl-pos-claudecode { left: 65%; }
+.tl-pos-today { left: 90%; }
+.tl-dot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #C05C3B;
+  border: 3px solid #F5F3EC;
+}
+.tl-event.tl-today .tl-dot {
+  background: #F5F3EC;
+  border-color: #C05C3B;
+  box-shadow: 0 0 0 5px rgba(192, 92, 59, 0.25);
+}
+.tl-content {
+  position: absolute;
+  left: 0;
+  transform: translateX(-50%);
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.tl-content.tl-above {
+  bottom: 14px;
+}
+.tl-content.tl-below {
+  top: 14px;
+}
+.tl-date {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 700;
+  color: #C05C3B;
+  font-size: 0.75em;
+  margin: 0.3em 0;
+}
+.tl-name {
+  display: block;
+  font-weight: 700;
+  color: #2C2A25;
+  font-size: 0.7em;
+  text-align: center;
+}
+.tl-sub {
+  display: block;
+  color: #6B6459;
+  font-size: 0.6em;
+  margin-top: 0.2em;
+  text-align: center;
+}
