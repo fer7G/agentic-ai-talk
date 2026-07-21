@@ -76,7 +76,6 @@ style: |
     font-family: "Playfair Display", Georgia, serif;
     font-size: 0.8em;
     color: #6B6459;
-    letter-spacing: 0.06em;
   }
   section.lead header {
     display: none;
