@@ -5,9 +5,9 @@ paginate: true
 size: 16:9
 backgroundColor: #F5F3EC
 style: |
-  /* Paleta inspirada en la web/UI de Claude (Anthropic): fondo crema cálido,
-     acento terracota; tipografía retro estilo cabecera de periódico antiguo
-     (Playfair Display en títulos, Lora en el cuerpo). */
+  /* Palette inspired by the Claude (Anthropic) web UI: warm cream background,
+     terracotta accent; retro old-newspaper-headline typography
+     (Playfair Display for headings, Lora for body text). */
   @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap');
   section {
     background-color: #F5F3EC;
@@ -70,226 +70,226 @@ style: |
 
 <!-- _class: lead -->
 
-# IA Agéntica y *Vibe Coding*
+# Agentic AI and *Vibe Coding*
 
-## Cómo aprovechar (sin perderte en el hype) la nueva ola de la IA
+## How to make the most of the new wave of AI (without getting lost in the hype)
 
 Fernando Guirao
-Computational RNA Biology Group — Ciencias Biomédicas, UIC
-22 de julio de 2026
+Computational RNA Biology Group — Biomedical Sciences, UIC
+July 22, 2026
 
 ---
 
-## Sobre mí
+## About me
 
-- Recién graduado en Ingeniería Informática — FIB, UPC
-- TFG en el **Computational RNA Biology Group** (UIC)
-- Durante el TFG usé IA agéntica de forma intensiva para programar
-- Esta charla resume lo que me hubiera gustado saber al empezar
+- Recent graduate in Computer Science Engineering — FIB, UPC
+- Did my thesis (TFG) at the **Computational RNA Biology Group** (UIC)
+- Used agentic AI heavily throughout the thesis to write code
+- This talk is what I wish someone had told me when I started
 
 ---
 
 ## Agenda
 
-1. Introducción: del chat a los agentes
-2. El espacio de trabajo del agente
-3. Primeros pasos con Claude Code
-4. Demo en vivo: de especificación a aplicación
-5. La importancia del contexto
+1. Introduction: from chat to agents
+2. The agent's workspace
+3. Getting started with Claude Code
+4. Live demo: from spec to app
+5. Why context matters
 6. *Skills*
-7. Por debajo del capó: tokens, contexto, alucinaciones
-8. Cómo navegar el hype
+7. Under the hood: tokens, context, hallucinations
+8. How to navigate the hype
 
 ---
 
 <!-- _class: lead -->
 
-# 1. Introducción
+# 1. Introduction
 
 ---
 
-## De ChatGPT al agente
+## From ChatGPT to the agent
 
-- **Finales de 2022**: boom de ChatGPT
-- Paradigma "chat": pregunta → respuesta
-- El humano copia, pega y ejecuta cada paso a mano
-- La IA solo "opina en texto"; no actúa por sí misma
+- **Late 2022**: the ChatGPT boom
+- The "chat" paradigm: question → answer
+- The human copies, pastes, and executes every step by hand
+- The AI only "talks"; it doesn't act on its own
 
 <!--
-Nota para el ponente: aquí sirve preguntar a la sala quién ha usado ChatGPT
-copiando/pegando código o texto a mano. Casi todos levantarán la mano:
-ese es exactamente el paradigma que vamos a contrastar con el agéntico.
+Speaker note: good moment to ask the room who has used ChatGPT by
+copy-pasting code or text by hand. Almost everyone will raise a hand:
+that's exactly the paradigm we're about to contrast with the agentic one.
 -->
 
 ---
 
-## El nuevo paradigma: IA agéntica
+## The new paradigm: agentic AI
 
-- El LLM deja de ser un simple "oráculo de texto"
-- Puede **usar herramientas**: leer/escribir archivos, ejecutar comandos, navegar la web, llamar APIs...
-- Planifica, ejecuta, observa el resultado y corrige — de forma autónoma
-- Hoy es el paradigma dominante en entornos productivos (no solo en programación)
+- The LLM is no longer just a "text oracle"
+- It can **use tools**: read/write files, run commands, browse the web, call APIs...
+- It plans, executes, observes the result, and corrects itself — autonomously
+- This is now the dominant paradigm in production environments (not just software)
 
 ---
 
-## ¿Por qué esta charla?
+## Why this talk?
 
-- El campo avanza a una velocidad brutal: modelos, *benchmarks* y herramientas nuevas cada semana
-- Objetivo 1: dar una base sólida para empezar a usarlo ya
-- Objetivo 2: criterio para separar señal de ruido — **no es oro todo lo que reluce**
+- The field moves at a brutal pace: new models, benchmarks, and tools every week
+- Goal 1: give you a solid foundation to start using it today
+- Goal 2: give you judgment to separate signal from noise — **not everything that glitters is gold**
 
 ---
 
 <!-- _class: lead -->
 
-# 2. El espacio de trabajo del agente
+# 2. The agent's workspace
 
 ---
 
-## ¿Dónde "vive" un agente de código?
+## Where does a coding agent "live"?
 
-- Herramientas como Claude Code corren **en tu ordenador**, no solo en una web
-- Necesitan acceder a:
-  - El **sistema de archivos** (carpetas y archivos)
-  - La **terminal** (para ejecutar comandos)
-  - Opcionalmente, internet
-
----
-
-## Nociones básicas: sistema de archivos
-
-- Todo en tu ordenador vive en carpetas (directorios) y archivos
-- Ruta absoluta: `/Users/tu_usuario/proyecto/datos.csv`
-- Ruta relativa: `datos.csv` (relativa a "dónde estás" ahora mismo)
-- El agente lee y escribe archivos exactamente como lo harías tú a mano
+- Tools like Claude Code run **on your own computer**, not just on a website
+- They need access to:
+  - The **file system** (folders and files)
+  - The **terminal** (to run commands)
+  - Optionally, the internet
 
 ---
 
-## Nociones básicas: la terminal
+## File system basics
 
-- La terminal (shell) permite dar órdenes al ordenador escribiendo texto
-- Comandos básicos:
-  - `pwd` → ¿dónde estoy?
-  - `ls` → ¿qué hay aquí?
-  - `cd carpeta` → moverme a "carpeta"
-- El agente "escribe" estos comandos por ti — entender qué hacen te da control real
+- Everything on your computer lives organized in folders (directories) and files
+- Absolute path: `/Users/your_username/project/data.csv`
+- Relative path: `data.csv` (relative to "where you currently are")
+- The agent reads and writes files exactly as you would by hand
 
 ---
 
-## ¿Qué sistema operativo usar?
+## Terminal basics
 
-- **Recomendado: macOS o Linux**
+- The terminal (shell) lets you give the computer instructions by typing text
+- Basic commands:
+  - `pwd` → where am I?
+  - `ls` → what's here?
+  - `cd folder` → move into "folder"
+- The agent "types" these commands for you — understanding what they do gives you real control
+
+---
+
+## Which operating system to use?
+
+- **Recommended: macOS or Linux**
 - **Windows → WSL** (Windows Subsystem for Linux)
-- El ecosistema de herramientas de IA agéntica está construido pensando en entornos tipo Unix
+- The agentic AI tooling ecosystem is built with Unix-like environments in mind
 
 ---
 
 <!-- _class: lead -->
 
-# 3. Primeros pasos con Claude Code
+# 3. Getting started with Claude Code
 
 ---
 
-## ¿Qué es Claude Code?
+## What is Claude Code?
 
-- Interfaz de línea de comandos (CLI) para trabajar con Claude de forma agéntica
-- Corre en tu terminal, dentro de la carpeta de tu proyecto
-- Ve tus archivos, puede editarlos, ejecutar comandos, instalar dependencias...
+- A command-line interface (CLI) for working with Claude in an agentic way
+- Runs in your terminal, inside your project folder
+- Sees your files, can edit them, run commands, install dependencies...
 
 ---
 
-## Instalación
+## Installation
 
-Instalador nativo (recomendado, se autoactualiza):
+Native installer (recommended, auto-updates):
 ```bash
 curl -fsSL https://claude.ai/install.sh | bash
 ```
 
-Con Homebrew (macOS/Linux):
+With Homebrew (macOS/Linux):
 ```bash
 brew install --cask claude-code
 ```
 
-Con npm (requiere Node.js 22+):
+With npm (requires Node.js 22+):
 ```bash
 npm install -g @anthropic-ai/claude-code
 ```
 
 ---
 
-## Planes y acceso
+## Plans and access
 
-- Requiere cuenta **Pro, Max, Team o Enterprise** (el plan gratuito de claude.ai no incluye Code)
-- Alternativa: clave de API propia (pago por uso, sin suscripción)
-- También integrable vía AWS Bedrock, Google Vertex AI o Microsoft Foundry
+- Requires a **Pro, Max, Team, or Enterprise** account (the free claude.ai plan does not include Code)
+- Alternative: your own API key, pay-as-you-go, no subscription needed
+- Also available through AWS Bedrock, Google Vertex AI, or Microsoft Foundry
 
 <!--
-Nota: si alguien del departamento pregunta por coste para uso en investigación,
-recordar que el pago por API es por tokens consumidos, no por asiento/usuario.
+Note: if someone from the department asks about cost for research use,
+remember that API billing is per token consumed, not per seat/user.
 -->
 
 ---
 
 <!-- _class: lead -->
 
-# 4. Demo en vivo
+# 4. Live demo
 
 ---
 
-## De especificación a aplicación
+## From spec to application
 
-- Partimos de un archivo Markdown con la **especificación** de una pequeña herramienta
-- Se lo damos a Claude Code y le pedimos que lo implemente
-- Editor recomendado para revisar el código generado: **VS Code**
-- Todo el proceso, en directo, sin preparar nada de antemano
+- We start from a Markdown file with the **specification** of a small tool
+- We hand it to Claude Code and ask it to implement it
+- Recommended editor to review the generated code: **VS Code**
+- The whole process, live, with nothing prepared in advance
 
 ---
 
-## Qué vamos a construir
+## What we're going to build
 
-- Un pequeño **analizador de secuencias FASTA**
-- Entrada: una secuencia de ADN/ARN en formato FASTA
-- Salida: longitud, %GC, composición de bases, complementaria reversa, Tm aproximada
-- Una página web sencilla, sin servidor (todo corre en el navegador)
+- A small **FASTA sequence analyzer**
+- Input: a DNA/RNA sequence in FASTA format
+- Output: length, %GC, base composition, reverse complement, approximate Tm
+- A simple web page, no backend
 
-*(especificación completa en `demo/especificacion-demo.md`)*
+*(full specification in `demo/spec-demo.md`)*
 
 <!--
-Nota: abrir demo/especificacion-demo.md en VS Code, luego lanzar Claude Code
-en esa carpeta y pegar/pedir "implementa la especificación de este archivo".
-Dejar que trabaje sin interrumpir; comentar en voz alta lo que va haciendo.
+Note: open demo/spec-demo.md in VS Code, then launch Claude Code in that
+folder and ask it to "implement the specification in this file". Let it
+work without interrupting; narrate out loud what it's doing.
 -->
 
 ---
 
 <!-- _class: lead -->
 
-# 5. La importancia del contexto
+# 5. Why context matters
 
 ---
 
-## "Contexto" = lo que el agente sabe antes de empezar
+## "Context" = what the agent knows before it starts
 
-- Un LLM no tiene memoria entre sesiones: solo sabe lo que le decimos en cada conversación
-- Cuanto mejor sea el contexto, mejores decisiones toma el agente
-- Formas de dar contexto: instrucciones directas, archivos de referencia, documentación del proyecto...
+- An LLM has no memory between sessions: it only knows what we tell it in each conversation
+- The better the context, the better the decisions the agent makes
+- Ways to give context: direct instructions, reference files, project documentation...
 
 ---
 
 ## CLAUDE.md / AGENTS.md
 
-- `CLAUDE.md`: archivo Markdown que Claude Code lee automáticamente al empezar en un proyecto
-- Contiene: convenciones del proyecto, comandos útiles, decisiones de diseño, cosas a evitar...
-- `AGENTS.md`: convención equivalente y agnóstica de proveedor (la usan Cursor, Copilot...)
-- Claude Code puede leer ambos, e incluso generarlos automáticamente con `/init`
+- `CLAUDE.md`: a Markdown file Claude Code reads automatically when it starts working in a project
+- Contains: project conventions, useful commands, design decisions, things to avoid...
+- `AGENTS.md`: an equivalent, provider-agnostic convention (used by Cursor, Copilot...)
+- Claude Code can read both, and can even generate them automatically with `/init`
 
 ---
 
-## Buenas prácticas de contexto
+## Context best practices
 
-- Documentos Markdown de especificación (como el de la demo)
-- Mantenerlos cortos y concretos — no un volcado de todo el conocimiento del mundo
-- El contexto también **cuesta**: ocupa espacio en la ventana de contexto (siguiente sección)
+- Markdown specification documents (like the one used in the demo)
+- Keep them short and specific — not a dump of all knowledge in the world
+- Context isn't free: it takes up space in the context window (next section)
 
 ---
 
@@ -299,88 +299,88 @@ Dejar que trabaje sin interrumpir; comentar en voz alta lo que va haciendo.
 
 ---
 
-## ¿Qué son las Skills?
+## What are Skills?
 
-- Paquetes de instrucciones reutilizables para tareas concretas y repetibles
-- Viven en `.claude/skills/`, definidas en un archivo `SKILL.md`
-- Se invocan como comandos (`/nombre-skill`) o el propio agente las activa cuando detecta que aplican
+- Reusable packages of instructions for specific, repeatable tasks
+- Live in `.claude/skills/`, defined in a `SKILL.md` file
+- Invoked either as a command (`/skill-name`) or auto-triggered by the agent when relevant
 
 ---
 
-## ¿Por qué son útiles?
+## Why are they useful?
 
-- Solo se cargan cuando hacen falta → no ocupan contexto de fondo todo el rato
-- Permiten estandarizar procedimientos: "cómo desplegar", "cómo revisar código", "cómo generar un análisis de tipo X"
-- Se pueden compartir entre proyectos y entre miembros de un mismo grupo de investigación
+- Only loaded when actually needed → don't take up context in the background
+- Let you standardize procedures: "how to deploy", "how to review code", "how to run a type-X analysis"
+- Can be shared across projects and across members of the same research group
 
 ---
 
 <!-- _class: lead -->
 
-# 7. Por debajo del capó
+# 7. Under the hood
 
 ---
 
 ## Tokens
 
-- Un LLM no procesa "palabras", sino **tokens** (fragmentos de texto, ~3-4 caracteres en promedio)
-- Todo tiene un coste en tokens: lo que escribes, lo que el modelo responde, los archivos que lee
-- Los precios de la API y los límites de uso se miden en tokens
+- An LLM doesn't process "words", it processes **tokens** (text chunks, ~3-4 characters on average)
+- Everything has a token cost: what you write, what the model replies, the files the agent reads
+- API pricing and usage limits are measured in tokens
 
 ---
 
-## Ventana de contexto
+## Context window
 
-- Cantidad máxima de tokens que el modelo puede "tener en mente" a la vez
-- Incluye: la conversación, los archivos leídos, el `CLAUDE.md`, las *skills* cargadas...
-- Si se llena, hay que resumir o empezar de nuevo → se puede perder detalle
-- Una ventana de contexto muy grande **no** garantiza atención perfecta a todo su contenido
+- The maximum number of tokens a model can "keep in mind" at once
+- Includes: the conversation, files the agent has read, `CLAUDE.md`, loaded skills...
+- Once it fills up, older content has to be summarized or dropped → detail can be lost
+- A very large context window does **not** guarantee equal attention to all of its content
 
 ---
 
-## Alucinaciones
+## Hallucinations
 
-- Un LLM genera texto estadísticamente plausible, no necesariamente verdadero
-- Puede inventar funciones, referencias bibliográficas, resultados de un análisis...
-- En un agente esto es más grave: puede **ejecutar acciones** basadas en una alucinación
-- Mitigación: verificar, pedir fuentes, ejecutar tests, revisar el *diff* antes de aceptar cambios
+- An LLM generates statistically plausible text, not necessarily true text
+- It can confidently invent functions, citations, or the results of an analysis
+- In an agent, this is more serious: it can **take actions** based on a hallucination
+- Mitigation: verify, ask for sources, run tests, review the diff before accepting changes
 
 <!--
-Nota: buen momento para conectar con el mundo de investigación: nunca aceptar
-un resultado de análisis o una cita bibliográfica generada por IA sin verificarla.
+Note: good moment to connect with the research angle: never accept an
+AI-generated analysis result or bibliographic citation without checking it.
 -->
 
 ---
 
 <!-- _class: lead -->
 
-# 8. Cómo navegar el hype
+# 8. How to navigate the hype
 
 ---
 
-## Algunas heurísticas
+## Some heuristics
 
-- Un modelo o *benchmark* nuevo cada semana no significa que deba cambiar tu flujo de trabajo cada semana
-- Desconfía de demos que no puedas reproducir tú mismo
-- Prueba con tus propios datos y tareas reales antes de creer un titular
-- La pregunta útil no es "¿es esto lo último?" sino "¿me ahorra tiempo hoy, en mi problema?"
+- A new model or benchmark every week doesn't mean your workflow should change every week
+- Be suspicious of demos you can't reproduce yourself
+- Test with your own data and real tasks before believing a headline
+- The useful question isn't "is this the newest thing?" but "does this save me time today, on my problem?"
 
 ---
 
-## Recursos para seguir aprendiendo
+## Resources to keep learning
 
-- Documentación oficial de Claude Code: `https://code.claude.com/docs`
-- Formato *Agent Skills* (estándar abierto): `https://agentskills.io`
-- El documento de apoyo de esta charla: `documento-apoyo.md`
-- La especificación usada en la demo: `demo/especificacion-demo.md`
+- Official Claude Code docs: `https://code.claude.com/docs`
+- Agent Skills format (open standard): `https://agentskills.io`
+- This talk's companion document: `companion-doc.md`
+- The specification used in the demo: `demo/spec-demo.md`
 
 ---
 
 <!-- _class: lead -->
 
-# ¡Gracias!
+# Thank you!
 
-## Preguntas
+## Questions
 
 Fernando Guirao
 fernando.guirao@estudiantat.upc.edu

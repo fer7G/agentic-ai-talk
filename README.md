@@ -1,54 +1,62 @@
-# IA Agéntica y Vibe Coding — material de la charla
+# Agentic AI and Vibe Coding — talk material
 
-Material para el seminario sobre IA agéntica / vibe coding en el departamento de
-Ciencias Biomédicas (UIC), 22 de julio de 2026.
+Material for the seminar on agentic AI / vibe coding at the Biomedical Sciences
+department (UIC), July 22, 2026. The talk itself is in English (this README and
+our working conversation are in Spanish, but everything the audience sees is
+in English).
 
-## Contenido
+## Contents
 
-- [`slides.md`](slides.md) — diapositivas en formato [Marp](https://marp.app)
+- [`slides.md`](slides.md) — slide deck in [Marp](https://marp.app) format
   (Markdown → PDF / PPTX / HTML).
-- [`documento-apoyo.md`](documento-apoyo.md) — documento de apoyo con más detalle,
-  pensado para que el público lo lea antes, durante o después de la charla.
-- [`demo/especificacion-demo.md`](demo/especificacion-demo.md) — especificación de
-  la mini-aplicación que se construye en directo durante la demo (un analizador de
-  secuencias FASTA).
+- [`companion-doc.md`](companion-doc.md) — companion document with more detail,
+  meant for the audience to read before, during, or after the talk.
+- [`demo/spec-demo.md`](demo/spec-demo.md) — specification for the mini-app built
+  live during the demo (a FASTA sequence analyzer).
 
-## Cómo exportar las diapositivas
+## How to export the slides
 
-Necesitas Node.js instalado. Se puede usar Marp sin instalar nada de forma global,
-con `npx`:
+You need Node.js installed. Marp can be used without installing anything
+globally, via `npx`:
 
 ```bash
-# Vista previa en el navegador con recarga en vivo, mientras editas slides.md
+# Live-reloading browser preview while you edit slides.md
 npx @marp-team/marp-cli@latest -w -s slides.md
 
-# Exportar a PDF
+# Export to PDF
 npx @marp-team/marp-cli@latest slides.md -o slides.pdf
 
-# Exportar a PowerPoint (editable)
+# Export to PowerPoint (editable)
 npx @marp-team/marp-cli@latest slides.md -o slides.pptx
 
-# Exportar a una página HTML autocontenida
+# Export to a self-contained HTML page
 npx @marp-team/marp-cli@latest slides.md -o slides.html
 ```
 
-Alternativa: instalar la extensión **"Marp for VS Code"**, que añade una vista
-previa en el propio editor y comandos de exportación desde la interfaz.
+Alternative: install the **"Marp for VS Code"** extension, which adds an
+in-editor preview and export commands from the UI.
 
-## Notas de presentador
+Note: PDF/PPTX export needs a local Chrome, Edge, or Firefox install (Marp
+uses it under the hood to render). Arc (Chromium-based) does not work for this
+— it fails to launch in headless/automated mode. The HTML export does not need
+a browser at all, and can simply be opened in Arc (or any browser) directly —
+this is the easiest way to present.
 
-Dentro de `slides.md` hay comentarios HTML (`<!-- ... -->`) en algunas diapositivas
-con apuntes para el ponente. Marp los trata como notas de presentador: no aparecen
-en la exportación normal, pero sí en el modo de presentador (`npx @marp-team/marp-cli@latest -s slides.md`,
-opción "Presenter View").
+## Presenter notes
 
-## Para la demo en vivo
+Inside `slides.md`, some slides have HTML comments (`<!-- ... -->`) with notes
+for the speaker. Marp treats these as presenter notes: they don't show up in a
+normal export, but do appear in presenter mode
+(`npx @marp-team/marp-cli@latest -s slides.md`, "Presenter View" option).
 
-1. Abre la carpeta `demo/` en VS Code.
-2. Lanza Claude Code en esa carpeta (`claude` en la terminal, situado dentro de `demo/`).
-3. Pide a Claude Code que implemente `especificacion-demo.md` como una página web.
-4. Abre el `index.html` resultante en el navegador para ver el resultado.
+## For the live demo
 
-Si quieres tener una versión ya construida como red de seguridad por si la demo en
-directo falla (wifi, tiempo, etc.), dímelo y genero también una implementación de
-referencia en `demo/solucion/`.
+1. Open the `demo/` folder in VS Code.
+2. Launch Claude Code in that folder (`claude` in the terminal, from inside
+   `demo/`).
+3. Ask Claude Code to implement `spec-demo.md` as a web page.
+4. Open the resulting `index.html` in the browser to see the result.
+
+If you'd like a pre-built version as a safety net in case the live demo fails
+(wifi, time, etc.), let me know and I'll also generate a reference
+implementation in `demo/solution/`.
