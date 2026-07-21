@@ -80,6 +80,33 @@ style: |
   section.lead header {
     display: none;
   }
+  section.has-fig-right {
+    padding-right: 520px;
+  }
+  img.fig-right {
+    position: absolute;
+    top: 50%;
+    right: 40px;
+    transform: translateY(-50%);
+    width: 480px;
+    border-radius: 12px;
+  }
+  section.has-os-logos {
+    padding-right: 420px;
+  }
+  .os-logos {
+    position: absolute;
+    top: 50%;
+    right: 90px;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    gap: 60px;
+  }
+  .os-logos img {
+    height: 130px;
+    width: auto;
+  }
   @import url('assets/timeline.css');
 ---
 
@@ -191,7 +218,7 @@ own in the terminal.
 
 ---
 
-## Where does a coding agent "live"?
+## Where does the agent "live"?
 
 - Tools like Claude Code run **on your own computer**, not just on a website
 - They need access to:
@@ -201,12 +228,16 @@ own in the terminal.
 
 ---
 
+<!-- _class: has-fig-right -->
+
 ## File system basics
 
 - Everything on your computer lives organized in folders (directories) and files
 - Absolute path: `/Users/your_username/project/data.csv`
 - Relative path: `data.csv` (relative to "where you currently are")
 - The agent reads and writes files exactly as you would by hand
+
+<img src="assets/file-system.jpeg" alt="Illustration of a file system" class="fig-right" />
 
 ---
 
@@ -217,17 +248,24 @@ own in the terminal.
   - `pwd` → where am I?
   - `ls` → what's here?
   - `cd folder` → move into "folder"
-- The agent "types" these commands for you — understanding what they do gives you real control
+- The agent "types" these commands for you
 
 - **Not programming, just running lab protocols:** Think of the terminal as standardizing a recipe. The agent simply runs the steps for you to avoid endless repetitive clicking.	
 
 ---
 
+<!-- _class: has-os-logos -->
+
 ## Which operating system to use?
 
 - **Recommended: macOS or Linux**
-- **Windows → WSL** (Windows Subsystem for Linux)
+- **Windows → [WSL](https://learn.microsoft.com/windows/wsl/)** (Windows Subsystem for Linux)
 - The agentic AI tooling ecosystem is built with Unix-like environments in mind
+
+<div class="os-logos">
+  <img src="assets/apple-logo.webp" alt="Apple logo" />
+  <img src="assets/linux-logo.png" alt="Linux logo" />
+</div>
 
 ---
 

@@ -93,7 +93,7 @@ gives you real control over what the agent does on your computer.
 ### Recommended operating system
 
 We recommend using **macOS or Linux**. On Windows, the recommended option is to
-install **WSL** (*Windows Subsystem for Linux*), which gives you a full Linux
+install **[WSL](https://learn.microsoft.com/windows/wsl/)** (*Windows Subsystem for Linux*), which gives you a full Linux
 environment inside Windows. The practical reason is that the vast majority of the
 agentic AI tooling ecosystem (installers, libraries, documentation) is built with
 Unix-like environments in mind.
