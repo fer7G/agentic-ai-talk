@@ -219,6 +219,8 @@ own in the terminal.
   - `cd folder` → move into "folder"
 - The agent "types" these commands for you — understanding what they do gives you real control
 
+- **Not programming, just running lab protocols:** Think of the terminal as standardizing a recipe. The agent simply runs the steps for you to avoid endless repetitive clicking.	
+
 ---
 
 ## Which operating system to use?
@@ -341,6 +343,15 @@ work without interrupting; narrate out loud what it's doing.
 
 ---
 
+## A real lab example: what goes in `CLAUDE.md`?
+
+- **Visual standardization:** "Always use our group's specific color palette and clean formatting for RNA expression plots"
+- **Tooling defaults:** "Python scripts must use `ViennaRNA` by default for secondary structure folding and analysis"
+- **Infrastructure commands:** "Here is the exact command syntax and parameters to submit jobs to our HPC cluster"
+- **Data rules:** "Never hardcode absolute file paths; always read sequences using relative paths from the `/data` folder"
+
+---
+
 <!-- _class: lead -->
 <!-- header: 'Skills' -->
 
@@ -402,6 +413,22 @@ AI-generated analysis result or bibliographic citation without checking it.
 
 ---
 
+## Hallucinations in Biology
+
+- In biology, models can confidently invent **non-existent sequences, fake alignments, or false references**
+- In an agent, this is critical: it might run a whole downstream analysis on a hallucinated output
+- **The rule:** AI executes and suggests, but scientific validation remains **100% human**
+
+---
+
+## Data confidentiality & science
+
+- **The golden rule:** Never upload unpublished experimental data, sensitive patient sequences, or proprietary lab scripts to public web chats
+- **Web Chats vs. Agents/APIs:** CLI agents using direct API keys typically offer much stronger privacy controls and opt-outs from model training
+- **When in doubt:** Always check before feeding new sequence datasets or biological data to commercial AI models
+
+---
+
 <!-- _class: lead -->
 <!-- header: 'How to navigate the hype' -->
 
@@ -428,6 +455,18 @@ AI-generated analysis result or bibliographic citation without checking it.
 ---
 
 <!-- _class: lead -->
+
+<!-- header: 'Discussion' -->
+
+# Open discussion & lab pro-tips
+
+## Let's hear from the team
+
+- **From our AI experts:** What are your top daily tricks for terminal agents, prompts, and token optimization?
+- **From our biomed undergrads:** What repetitive data or lab task would you like an agent to automate for you tomorrow?
+- **Q&A:** How can we start integrating this into our current RNA workflows?
+
+---
 
 # Thank you!
 
