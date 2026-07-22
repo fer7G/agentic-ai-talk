@@ -534,6 +534,16 @@ AI-generated analysis result or bibliographic citation without checking it.
 
 ---
 
+## Hands-on: RNA-seq analysis with ClawBio
+
+- Try it yourself: an end-to-end **bulk RNA-seq** workflow — quantification, QC, and differential expression — driven entirely by natural-language prompts to Claude Code
+- Uses the **ClawBio** plugin (Salmon quantification, MultiQC) plus a custom `differentialabundance` skill wrapping the nf-core/differentialabundance Nextflow pipeline
+- Shows Claude Code orchestrating real bioinformatics pipelines (Salmon, MultiQC, nf-core), not just writing code
+
+*(full instructions in `rnaseq_demo/README.md`)*
+
+---
+
 <!-- _class: lead -->
 
 # Relax.
