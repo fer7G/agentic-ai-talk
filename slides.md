@@ -330,6 +330,16 @@ remember that API billing is per token consumed, not per seat/user.
 
 ---
 
+## Sessions
+
+- A session is **tied to the directory** you launched `claude` from, not to "the project" in the abstract
+- Some people always start from the system's root — worth being intentional about where you launch it
+- `claude --resume` only lists conversations started in **that same directory**
+- Each conversation is stored as a `.jsonl` file (plus a folder) under `~/.claude/projects/<project-folder-path>/`
+- You'll also see a `memory/` folder there — more on that later (memory can also live inside your project folder if you want to version it)
+
+---
+
 <!-- _class: lead -->
 <!-- header: 'Demo' -->
 
