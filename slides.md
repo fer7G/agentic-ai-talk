@@ -403,12 +403,14 @@ work without interrupting; narrate out loud what it's doing.
 
 ---
 
-## CLAUDE.md / AGENTS.md
+## 'CLAUDE.md' / 'AGENTS.md' — memory management
 
-- `CLAUDE.md`: a Markdown file Claude Code reads automatically when it starts working in a project
+- CLAUDE.md: a Markdown file Claude Code reads automatically when it starts working in a project
 - Contains: project conventions, useful commands, design decisions, things to avoid...
-- `AGENTS.md`: an equivalent, provider-agnostic convention (used by Cursor, Copilot...)
+- AGENTS.md: an equivalent, provider-agnostic convention (used by Cursor, Copilot...)
 - Claude Code can read both, and can even generate them automatically with `/init`
+- Memory normally lives outside the project (`~/.claude/projects/...`) — you can force it into the project folder instead (e.g. a `context/` folder) to version it with git
+- CLAUDE.md can index all your context files (memory, lab journaling...) so they're easy to navigate
 
 ---
 
@@ -529,6 +531,16 @@ AI-generated analysis result or bibliographic citation without checking it.
 - **midudev** — web & coding best practices
 - **BettaTech** — software engineering & tech concepts
 - **La Inteligencia Artificial** — AI updates & model overviews
+
+---
+
+<!-- _class: lead -->
+
+# Relax.
+
+You probably don't need a 12-agent orchestration graph. Just say what you want.
+
+![width:620px](assets/meme.jpeg)
 
 ---
 
