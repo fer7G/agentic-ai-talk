@@ -1,0 +1,132 @@
+:root {
+  --accent: #c0563b;
+  --accent-light: #f3e4dd;
+  --text: #262421;
+  --muted: #6b6459;
+  --border: #e2ddd3;
+  --bg: #fbfaf7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  padding: 40px 20px;
+}
+
+main {
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 4px;
+}
+
+.subtitle {
+  color: var(--muted);
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-size: 1.05rem;
+}
+
+textarea {
+  width: 100%;
+  font-family: ui-monospace, "SF Mono", Consolas, monospace;
+  font-size: 1rem;
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  resize: vertical;
+  background: #fff;
+  color: var(--text);
+}
+
+textarea:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+button#analyze-btn {
+  margin-top: 16px;
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background: var(--accent);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button#analyze-btn:hover {
+  filter: brightness(0.92);
+}
+
+.message {
+  margin-top: 20px;
+  padding: 14px 18px;
+  border-radius: 8px;
+  background: var(--accent-light);
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.results {
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.card h2 {
+  margin: 0 0 10px 0;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+
+.card p {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.mono {
+  font-family: ui-monospace, "SF Mono", Consolas, monospace;
+  font-size: 0.95rem !important;
+  font-weight: 400 !important;
+  word-break: break-all;
+}
+
+.composition {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.composition span {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.composition small {
+  display: block;
+  font-weight: 400;
+  color: var(--muted);
+  font-size: 0.8rem;
+}

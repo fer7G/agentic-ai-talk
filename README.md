@@ -11,8 +11,12 @@ audience sees is in English).
   (Markdown → PDF / PPTX / HTML).
 - [`companion-doc.md`](companion-doc.md) — companion document with more detail,
   meant for the audience to read before, during, or after the talk.
-- [`demo/spec-demo.md`](demo/spec-demo.md) — specification for the mini-app built
-  live during the demo (a FASTA sequence analyzer).
+- `fasta-demo/` — the FASTA sequence analyzer already built and tested from
+  `spec-demo.md`, kept as a working reference/fallback copy.
+- `fasta-demo-live/` — a clean copy containing only `spec-demo.md`, meant to
+  be built live during the talk (see "For the demo" below).
+- `webapp-demo/` — a second, more complex pre-built demo (an ESM-2 protein
+  explorer) to show off what's possible beyond the live-built example.
 
 ## How to export the slides
 
@@ -51,12 +55,13 @@ normal export, but do appear in presenter mode
 
 ## For the demo
 
-1. Open the `demo/` folder in VS Code.
+1. Open the `fasta-demo-live/` folder in VS Code — it only contains
+   `spec-demo.md`, so the build happens from scratch in front of the audience.
 2. Launch Claude Code in that folder (`claude` in the terminal, from inside
-   `demo/`).
+   `fasta-demo-live/`).
 3. Ask Claude Code to implement `spec-demo.md` as a web page.
 4. Open the resulting `index.html` in the browser to see the result.
 
-If you'd like a pre-built version as a safety net in case the demo fails
-(wifi, time, etc.), let me know and I'll also generate a reference
-implementation in `demo/solution/`.
+`fasta-demo/` already has a tested, working build of the same spec — open it
+as a safety net if the live build fails (wifi, time, etc.), or to compare
+against what Claude Code produces live.

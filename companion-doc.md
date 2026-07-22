@@ -153,7 +153,7 @@ One of the most effective ways to work with a coding agent is to first write a
 **specification**: a document (usually in Markdown) describing, in plain language,
 what we want to build. The more specific the specification, the better the result.
 
-In the talk we start from the file [`demo/spec-demo.md`](demo/spec-demo.md), which
+In the talk we start from the file [`fasta-demo-live/spec-demo.md`](fasta-demo-live/spec-demo.md), which
 describes a small **FASTA sequence analyzer**: a simple web page, no server
 required, where you can paste a DNA/RNA sequence in FASTA format and get:
 
@@ -293,7 +293,7 @@ Some practical heuristics for not getting lost in the media noise around AI:
 
 - Official Claude Code documentation: `https://code.claude.com/docs`
 - Agent Skills format (open standard): `https://agentskills.io`
-- The specification used in this talk's demo: [`demo/spec-demo.md`](demo/spec-demo.md)
+- The specification used in this talk's demo: [`fasta-demo-live/spec-demo.md`](fasta-demo-live/spec-demo.md)
 
 ---
 

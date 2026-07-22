@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>FASTA Sequence Analyzer</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main>
+    <h1>FASTA Sequence Analyzer</h1>
+    <p class="subtitle">Paste a DNA or RNA sequence in FASTA format and analyze it.</p>
+
+    <textarea id="fasta-input" placeholder=">example_sequence&#10;ACGGCTAGCTAGCTACGGATCGATCGATCGGCTAGCATCAGCTAGCATCG" rows="8"></textarea>
+
+    <button id="analyze-btn">Analyze</button>
+
+    <div id="message" class="message" hidden></div>
+
+    <section id="results" class="results" hidden>
+      <div class="card">
+        <h2>Header</h2>
+        <p id="result-header">—</p>
+      </div>
+      <div class="card">
+        <h2>Length</h2>
+        <p id="result-length">—</p>
+      </div>
+      <div class="card">
+        <h2>%GC</h2>
+        <p id="result-gc">—</p>
+      </div>
+      <div class="card">
+        <h2>Base composition</h2>
+        <div id="result-composition" class="composition"></div>
+      </div>
+      <div class="card">
+        <h2>Reverse complement</h2>
+        <p id="result-revcomp" class="mono"></p>
+      </div>
+      <div class="card">
+        <h2>Melting temperature (Tm)</h2>
+        <p id="result-tm">—</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

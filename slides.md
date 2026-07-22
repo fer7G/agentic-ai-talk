@@ -362,10 +362,10 @@ remember that API billing is per token consumed, not per seat/user.
 - Output: length, %GC, base composition, reverse complement, approximate Tm
 - A simple web page, no backend
 
-*(full specification in `demo/spec-demo.md`)*
+*(full specification in `fasta-demo-live/spec-demo.md`)*
 
 <!--
-Note: open demo/spec-demo.md in VS Code, then launch Claude Code in that
+Note: open fasta-demo-live/spec-demo.md in VS Code, then launch Claude Code in that
 folder and ask it to "implement the specification in this file". Let it
 work without interrupting; narrate out loud what it's doing.
 -->
@@ -513,7 +513,7 @@ AI-generated analysis result or bibliographic citation without checking it.
 - Official Claude Code docs: `https://code.claude.com/docs`
 - Agent Skills format (open standard): `https://agentskills.io`
 - This talk's companion document: `companion-doc.md`
-- The specification used in the demo: `demo/spec-demo.md`
+- The specification used in the demo: `fasta-demo-live/spec-demo.md`
 
 ---
 
