@@ -24,18 +24,26 @@ def _require_gpu() -> bool:
     return os.environ.get("ESM_REQUIRE_GPU", "true").lower() not in ("false", "0", "no")
 
 
+def _force_cpu() -> bool:
+    # Escape hatch for the PyTorch MPS backend's native crash (EXC_BREAKPOINT
+    # in copy_cast_kernel_mps) triggered by this app's attention-map
+    # extraction on some Apple Silicon + torch builds. Set ESM_FORCE_CPU=true
+    # to skip MPS and run on CPU instead — slower, but doesn't crash.
+    return os.environ.get("ESM_FORCE_CPU", "false").lower() in ("true", "1", "yes")
+
+
 class ModelService:
     def __init__(self):
         if torch.cuda.is_available():
             self.device = torch.device("cuda")
             self.device_name = torch.cuda.get_device_name(0)
-        elif torch.backends.mps.is_available():
+        elif torch.backends.mps.is_available() and not _force_cpu():
             # Apple Silicon GPU, via PyTorch's Metal Performance Shaders
             # backend. Only reachable running natively — not from inside
             # Docker on macOS, which has no GPU passthrough at all.
             self.device = torch.device("mps")
             self.device_name = "Apple GPU (MPS)"
-        elif _require_gpu():
+        elif _require_gpu() and not _force_cpu():
             raise RuntimeError(
                 "No GPU available (checked CUDA and Apple MPS) — refusing to silently fall "
                 "back to CPU. Set ESM_REQUIRE_GPU=false to allow CPU execution."
@@ -58,6 +66,17 @@ class ModelService:
         self.aa_token_ids = [
             self.tokenizer.convert_tokens_to_ids(aa) for aa in STANDARD_AAS
         ]
+
+        # Warm up: this transformers version's EsmEmbeddings rotary cache
+        # (_cos_cached/_sin_cached) starts as None and its first-call check
+        # doesn't guard against that, so the very first real request to
+        # contacts() raises AttributeError and returns a 500 — but works fine
+        # on any later call once the cache is populated. Eating that one
+        # failure here, at startup, means real users never see it.
+        try:
+            self.contacts("ACDEFG")
+        except Exception:
+            pass
 
     def health(self) -> dict:
         return {
