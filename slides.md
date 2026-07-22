@@ -135,7 +135,7 @@ July 22, 2026
 1. Introduction: from chat to agents
 2. The agent's workspace
 3. Getting started with Claude Code
-4. Live demo: from spec to app
+4. Demo: from spec to app
 5. Why context matters
 6. *Skills*
 7. Under the hood: tokens, context, hallucinations
@@ -323,15 +323,17 @@ remember that API billing is per token consumed, not per seat/user.
 ## Basic commands
 
 - Start a session: `claude`
-- Resume a previous session: `claude --resume`
 - Rename the current session: `/rename`
+- Resume a previous session: `claude --resume`
+- Exit the session: `/exit`
+- Check your usage: `/usage`
 
 ---
 
 <!-- _class: lead -->
-<!-- header: 'Live demo' -->
+<!-- header: 'Demo' -->
 
-# 4. Live demo
+# 4. Demo
 
 ---
 
@@ -340,7 +342,6 @@ remember that API billing is per token consumed, not per seat/user.
 - We start from a Markdown file with the **specification** of a small tool
 - We hand it to Claude Code and ask it to implement it
 - Recommended editor to review the generated code: **VS Code**
-- The whole process, live, with nothing prepared in advance
 
 ---
 

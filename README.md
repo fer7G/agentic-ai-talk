@@ -49,7 +49,7 @@ for the speaker. Marp treats these as presenter notes: they don't show up in a
 normal export, but do appear in presenter mode
 (`npx @marp-team/marp-cli@latest -s slides.md`, "Presenter View" option).
 
-## For the live demo
+## For the demo
 
 1. Open the `demo/` folder in VS Code.
 2. Launch Claude Code in that folder (`claude` in the terminal, from inside
@@ -57,6 +57,6 @@ normal export, but do appear in presenter mode
 3. Ask Claude Code to implement `spec-demo.md` as a web page.
 4. Open the resulting `index.html` in the browser to see the result.
 
-If you'd like a pre-built version as a safety net in case the live demo fails
+If you'd like a pre-built version as a safety net in case the demo fails
 (wifi, time, etc.), let me know and I'll also generate a reference
 implementation in `demo/solution/`.
