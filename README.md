@@ -7,6 +7,7 @@ Sciences department (UIC), July 22, 2026.
 
 - [`slides.md`](slides.md) — slide deck in [Marp](https://marp.app) format
   (Markdown → PDF / PPTX / HTML).
+- [`slides.pdf`](slides.pdf) — PDF export of the slides.
 - [`companion-doc.md`](companion-doc.md) — companion document with more detail,
   meant for the audience to read before, during, or after the talk.
 - `fasta-demo/` — the FASTA sequence analyzer already built and tested from
