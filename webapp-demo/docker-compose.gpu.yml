@@ -1,0 +1,20 @@
+# GPU overlay for a Linux host with an NVIDIA GPU + nvidia-container-toolkit
+# installed. Not usable on macOS at all — Docker Desktop has no GPU
+# passthrough there for NVIDIA *or* Apple's own Metal/MPS.
+#
+#   docker compose -f docker-compose.yml -f docker-compose.gpu.yml up --build
+
+services:
+  backend:
+    build:
+      args:
+        TORCH_INDEX_URL: https://download.pytorch.org/whl/cu121
+    environment:
+      ESM_REQUIRE_GPU: "true"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]

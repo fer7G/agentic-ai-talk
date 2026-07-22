@@ -1,0 +1,33 @@
+# Portable base config — CPU-only, works on macOS and any Linux host
+# without a GPU. Docker Desktop on macOS has no GPU passthrough for
+# *either* NVIDIA or Apple's own Metal/MPS — that's a Docker Desktop
+# limitation, not something a Dockerfile can work around. On a Mac, run
+# ./deploy.sh natively instead if you want Apple Silicon GPU acceleration.
+#
+#   docker compose up --build
+#
+# On a Linux host with an NVIDIA GPU + nvidia-container-toolkit, layer the
+# GPU overlay on top instead:
+#
+#   docker compose -f docker-compose.yml -f docker-compose.gpu.yml up --build
+
+services:
+  backend:
+    build:
+      context: ./backend
+      args:
+        TORCH_INDEX_URL: https://download.pytorch.org/whl/cpu
+    environment:
+      ESM_REQUIRE_GPU: "false"
+    ports:
+      - "127.0.0.1:8000:8000" # loopback only — the frontend proxies to it internally
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+    depends_on:
+      - backend
+    ports:
+      - "5173:80"
+    restart: unless-stopped
