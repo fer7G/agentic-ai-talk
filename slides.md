@@ -372,6 +372,17 @@ work without interrupting; narrate out loud what it's doing.
 
 ---
 
+## A more complex case: the ESM-2 Protein Explorer
+
+- Same idea, bigger scope: a full **frontend + backend** webapp instead of a single static page
+- Runs a real protein language model (**ESM-2**) on GPU, plus calls to the ESMFold API for 3D structure
+- Features: attention-derived contact maps, 3D structure viewer, PCA embedding exploration, in-silico mutation scanning
+- Docker Compose setup, GPU detection (CUDA / Apple Silicon MPS), health checks — built the same way, just with more moving parts
+
+*(see `webapp-demo/README.md`)*
+
+---
+
 <!-- _class: lead -->
 <!-- header: 'Why context matters' -->
 
