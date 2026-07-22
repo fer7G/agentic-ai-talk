@@ -17,18 +17,19 @@ Sciences department (UIC), July 22, 2026.
 - `webapp-demo/` — a second, more complex pre-built demo (an ESM-2 protein
   explorer) to show off what's possible beyond the live-built example.
 
-## For the demo
+## Recreate the demo
 
-1. Open the `fasta-demo-live/` folder in VS Code — it only contains
-   `spec-demo.md`, so the build happens from scratch in front of the audience.
-2. Launch Claude Code in that folder (`claude` in the terminal, from inside
-   `fasta-demo-live/`).
-3. Ask Claude Code to implement `spec-demo.md` as a web page.
-4. Open the resulting `index.html` in the browser to see the result.
+During the talk, the FASTA sequence analyzer was built live with Claude Code,
+starting from nothing but a specification. You can reproduce that yourself:
 
-`fasta-demo/` already has a tested, working build of the same spec — open it
-as a safety net if the live build fails (wifi, time, etc.), or to compare
-against what Claude Code produces live.
+1. Copy `fasta-demo-live/spec-demo.md` into an empty folder — it's just the
+   spec, so you start from scratch, the same way the demo did.
+2. Launch Claude Code in that folder (`claude` in the terminal).
+3. Ask Claude Code to implement the specification as a web page.
+4. Open the resulting `index.html` in your browser to see the result.
+
+`fasta-demo/` already has a finished, working build of the same spec, if
+you'd rather just see the end result first.
 
 ## Recommended videos
 
