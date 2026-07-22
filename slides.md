@@ -353,11 +353,6 @@ remember that API billing is per token consumed, not per seat/user.
 - We hand it to Claude Code and ask it to implement it
 - Recommended editor to review the generated code: **VS Code**
 
-The prompt:
-```
-Implement the specification in spec-demo.md as a working web page.
-```
-
 ---
 
 ## What we're going to build
@@ -368,6 +363,11 @@ Implement the specification in spec-demo.md as a working web page.
 - A simple web page, no backend
 
 *(full specification in `fasta-demo-live/spec-demo.md`)*
+
+The prompt:
+```
+Implement the specification in spec-demo.md as a working web page.
+```
 
 <!--
 Note: open fasta-demo-live/spec-demo.md in VS Code, then launch Claude Code in that
