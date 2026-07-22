@@ -353,6 +353,11 @@ remember that API billing is per token consumed, not per seat/user.
 - We hand it to Claude Code and ask it to implement it
 - Recommended editor to review the generated code: **VS Code**
 
+The prompt:
+```
+Implement the specification in spec-demo.md as a working web page.
+```
+
 ---
 
 ## What we're going to build
@@ -516,15 +521,6 @@ AI-generated analysis result or bibliographic citation without checking it.
 - The useful question isn't "is this the newest thing?" but "does this save me time today, on my problem?"
 
 - **Which model to choose?** For agentic coding and bioinformatics scripts, our default recommendation (what Fer uses) is **Claude Sonnet** — the best balance of speed, reasoning, and cost.
-
----
-
-## Resources to keep learning
-
-- Official Claude Code docs: `https://code.claude.com/docs`
-- Agent Skills format (open standard): `https://agentskills.io`
-- This talk's companion document: `companion-doc.md`
-- The specification used in the demo: `fasta-demo-live/spec-demo.md`
 
 ---
 
