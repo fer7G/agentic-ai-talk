@@ -65,3 +65,9 @@ normal export, but do appear in presenter mode
 `fasta-demo/` already has a tested, working build of the same spec — open it
 as a safety net if the live build fails (wifi, time, etc.), or to compare
 against what Claude Code produces live.
+
+# Recommended videos
+
+[https://www.youtube.com/watch?v=2aN_-m1uU4k](https://www.youtube.com/watch?v=2aN_-m1uU4k)
+[https://www.youtube.com/watch?v=uogzSxOw4LU](https://www.youtube.com/watch?v=uogzSxOw4LU)
+
