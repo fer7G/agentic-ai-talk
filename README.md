@@ -1,9 +1,7 @@
 # Getting Started with Agentic AI — talk material
 
 Material for the seminar on agentic AI (a.k.a. vibe coding) at the Biomedical
-Sciences department (UIC), July 22, 2026. The talk itself is in English (this
-README and our working conversation are in Spanish, but everything the
-audience sees is in English).
+Sciences department (UIC), July 22, 2026.
 
 ## Contents
 
@@ -17,6 +15,25 @@ audience sees is in English).
   be built live during the talk (see "For the demo" below).
 - `webapp-demo/` — a second, more complex pre-built demo (an ESM-2 protein
   explorer) to show off what's possible beyond the live-built example.
+
+## For the demo
+
+1. Open the `fasta-demo-live/` folder in VS Code — it only contains
+   `spec-demo.md`, so the build happens from scratch in front of the audience.
+2. Launch Claude Code in that folder (`claude` in the terminal, from inside
+   `fasta-demo-live/`).
+3. Ask Claude Code to implement `spec-demo.md` as a web page.
+4. Open the resulting `index.html` in the browser to see the result.
+
+`fasta-demo/` already has a tested, working build of the same spec — open it
+as a safety net if the live build fails (wifi, time, etc.), or to compare
+against what Claude Code produces live.
+
+## Recommended videos
+
+[https://www.youtube.com/watch?v=2aN_-m1uU4k](https://www.youtube.com/watch?v=2aN_-m1uU4k)
+
+[https://www.youtube.com/watch?v=uogzSxOw4LU](https://www.youtube.com/watch?v=uogzSxOw4LU)
 
 ## How to export the slides
 
@@ -45,31 +62,3 @@ uses it under the hood to render). Arc (Chromium-based) does not work for this
 — it fails to launch in headless/automated mode. The HTML export does not need
 a browser at all, and can simply be opened in Arc (or any browser) directly —
 this is the easiest way to present.
-
-## Presenter notes
-
-Inside `slides.md`, some slides have HTML comments (`<!-- ... -->`) with notes
-for the speaker. Marp treats these as presenter notes: they don't show up in a
-normal export, but do appear in presenter mode
-(`npx @marp-team/marp-cli@latest -s slides.md`, "Presenter View" option).
-
-## For the demo
-
-1. Open the `fasta-demo-live/` folder in VS Code — it only contains
-   `spec-demo.md`, so the build happens from scratch in front of the audience.
-2. Launch Claude Code in that folder (`claude` in the terminal, from inside
-   `fasta-demo-live/`).
-3. Ask Claude Code to implement `spec-demo.md` as a web page.
-4. Open the resulting `index.html` in the browser to see the result.
-
-`fasta-demo/` already has a tested, working build of the same spec — open it
-as a safety net if the live build fails (wifi, time, etc.), or to compare
-against what Claude Code produces live.
-
-# Recommended videos
-
-
-[https://www.youtube.com/watch?v=2aN_-m1uU4k](https://www.youtube.com/watch?v=2aN_-m1uU4k)
-
-[https://www.youtube.com/watch?v=uogzSxOw4LU](https://www.youtube.com/watch?v=uogzSxOw4LU)
-
