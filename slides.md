@@ -305,23 +305,26 @@ With Homebrew (macOS/Linux):
 brew install --cask claude-code
 ```
 
-With npm (requires Node.js 22+):
-```bash
-npm install -g @anthropic-ai/claude-code
-```
-
 ---
 
 ## Plans and access
 
 - Requires a **Pro, Max, Team, or Enterprise** account (the free claude.ai plan does not include Code)
+- For personal use, **Pro (~€20/month)** covers most users
 - Alternative: your own API key, pay-as-you-go, no subscription needed
-- Also available through AWS Bedrock, Google Vertex AI, or Microsoft Foundry
 
 <!--
 Note: if someone from the department asks about cost for research use,
 remember that API billing is per token consumed, not per seat/user.
 -->
+
+---
+
+## Basic commands
+
+- Start a session: `claude`
+- Resume a previous session: `claude --resume`
+- Rename the current session: `/rename`
 
 ---
 
